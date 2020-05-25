@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>黑白棋</title>
+    <style>
+        #qp {
+            border: 1px solid black;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            background: green;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #qp div {
+            border: 1px solid black;
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+        }
+
+        #result,#buttons,#help,#detail{
+            margin-top:30px;
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <div id="qp" onclick="rule()">
+    </div>
+    <div id="buttons">
+        <button id="restart" onclick="restart()">重新开始</button>
+    </div>
+    <!--工具栏统计表-->
+    <div id="result">
+        <p id="w"></p>
+        <p id="b"></p>
+        <p id="s_f"></p>
+    </div>
+    <div id="help">
+        <p>提示：黑棋先下，灰白区域为可落子区域</p>
+        <p>。。。。</p>
+    </div>
+    <script src="hbq.js"></script>
+</body>
+
+</html>
